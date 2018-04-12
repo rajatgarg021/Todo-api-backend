@@ -5,22 +5,19 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', function(err, db){
     }
     console.log("connected to mongo db server");
 
-    // db.collection("Todos").insertOne({
-    //     text: "something to do",
-    //     completed: true
-    // }, (err, results)=>{
-    //     if(err){
-    //        return console.log("unable to insert todo");
+    db.collection("todos").insertOne({
+        text: "something more to do",
+        completed: true
+    }, (err, results)=>{
+        if(err){
+           return console.log("unable to insert todo");
         
-    //     }
-    //     console.log(JSON.stringify(results.ops, undefined, 2));
-    // })    
-    // db.close();
+        }
+        console.log(JSON.stringify(results.ops, undefined, 2));
+    })    
    
-    db.collection("Users").insertOne({
-        name: "raat garg",
-        age: 20,
-        location: "hostel j thapar university"
+    db.collection("users").insertOne({
+        email: "rajatgarg021@gmail.com"
     }, (err, results)=>{
         if(err){
            return  console.log("unable to insert Todo");

@@ -12,7 +12,7 @@ var Todo = mongoose.model("Todo", {
     },
     completedAt: {
         type: Number,
-        defalut: null
+        default: null
     }
 });
 

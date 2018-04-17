@@ -150,7 +150,7 @@ describe("PATCH .todos/:id", ()=>{
         .expect(200)
         .expect((res)=>{
             expect(res.body.todo.completed).toBe(false);
-            expect(res.body.todo.completedAt).toBe(null);
+            expect(res.body.todo.completedAt).toBe(null) ;
 
         })
         .end(done);
